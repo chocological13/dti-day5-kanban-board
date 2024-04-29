@@ -28,6 +28,7 @@ function App() {
       <Cards avatar heading="Card title" body="A description of a task" />
       <Cards avatar heading="Card title" body="A description of a task" tasks={["sleep", "eat", "drink water"]} />
       <Cards avatar heading="Card title" body="A description of a task" tasks={["sleep", "eat", "drink water"]} tags={tags} />
+      <Cards label={{ text: "yes", color: "rose" }} avatar heading="Card title" body="A description of a task" tasks={["sleep", "eat", "drink water"]} tags={tags} />
       <StarterBoard title="Starter Board" desc="This is starter board" />
     </div>
   );

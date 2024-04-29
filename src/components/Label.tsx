@@ -27,18 +27,13 @@ const Label: React.FC<LabelTagProps> = ({ text, color }) => {
     }
   };
 
+  // variables for classes
   const labelClass = `flex justify-center px-3 py-1 rounded-[20px] flex-col items-center gap-2.5 inline-flex ${color ? colorMap[color] : ""}`;
   const textClass = ` text-neutral-600 text-base font-semibold font-['SF Compact Text']`;
 
-  //   return (
-  //     <div className={labelClass}>
-  //       <div className={textClass}>{text}</div>
-  //     </div>
-  //   );
-
   return (
     <div className={labelClass} onClick={handleClick}>
-      {isClicked ? <input type="text" className={textClass} onChange={handleChange} onBlur={handleBlur} onKeyDown={handleKeyDown} /> : <div className={textClass}>{editText}</div>}
+      {isClicked ? <input type="text" className={`${textClass} bg-transparent outline-none`} onChange={handleChange} onBlur={handleBlur} onKeyDown={handleKeyDown} /> : <div className={textClass}>{editText}</div>}
     </div>
   );
 };
