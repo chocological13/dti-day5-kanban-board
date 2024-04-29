@@ -9,7 +9,7 @@ interface LabelTagProps {
 const Tag: React.FC<LabelTagProps> = ({ text, color }) => {
   return (
     <div className={`${color && colorMap[color]} flex-auto rounded py-1 px-2.5 inline-flex justify-center mr-1`}>
-      <div className="font-['SF Pro Text'] text-sm font-medium text-center">{text}</div>
+      <div className="font-['SF Compact Text'] text-sm font-medium text-center">{text}</div>
     </div>
   );
 };

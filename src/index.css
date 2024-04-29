@@ -16,6 +16,13 @@
   /* If you have local font, fill the local, if not use the CDN url */
   src: local("SF Compact Text"), url("https://fonts.cdnfonts.com/s/14246/sf-compact-text-heavy-58646f645b774.woff") format("woff");
 }
+@font-face {
+  font-family: "SF Compact Display";
+  font-style: normal;
+  font-weight: 400;
+  /* If you have local font, fill the local, if not use the CDN url */
+  src: url("https://fonts.cdnfonts.com/css/sf-compact-display") format("woff");
+}
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -11,7 +11,7 @@ const Tasks: React.FC<ProgProp> = ({ task }) => {
   return (
     <div className="flex gap-1 items-center my-2" onClick={() => setStatus((prev) => !prev)}>
       <img className="w-4 h-4" src={status ? checked : unchecked} alt="progress" />
-      <div className={`${status ? "line-through" : ""} font-['SF Pro Text'] font-medium text-sm text-center`}>{task}</div>
+      <div className={`${status ? "line-through" : ""} font-['SF Compact Text'] font-medium text-sm text-center`}>{task}</div>
     </div>
   );
 };

@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "sf-compact-text": ["SF Compact Text"]
+        "sf-compact-text": ["SF Compact Text"],
+        "sf-compact-display": ["SF Compact Display"]
       }
     }
   },

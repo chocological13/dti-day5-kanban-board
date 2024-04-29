@@ -24,8 +24,8 @@ const Cards: React.FC<CardsProp> = ({ heading, body, tasks, avatar, tags }) => {
   return (
     <div className="block rounded-lg bg-[#FAF9F6] p-6 drop-shadow-md text-left w-96 my-5">
       {avatar && <div>{avatarImg}</div>}
-      <h2 className="font-['SF Pro Text'] text-base font-semibold my-2">{heading}</h2>
-      <p className="font-['SF Pro Text'] text-sm font-normal text-[#5A5A65]">{body}</p>
+      <h2 className="font-['SF Compact Text'] text-base font-semibold my-2">{heading}</h2>
+      <p className="font-['SF Compact Text'] text-sm font-normal text-[#5A5A65]">{body}</p>
       {tasksList && <div className="mt-4">{tasksList}</div>}
       {cardTags && <div className="mt-4">{cardTags}</div>}
     </div>

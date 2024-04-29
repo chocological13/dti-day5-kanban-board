@@ -3,6 +3,7 @@ import Tasks from "./components/Tasks";
 import Label from "./components/Label";
 import Tag from "./components/Tag";
 import Cards from "./components/Cards";
+import StarterBoard from "./components/StarterBoard";
 
 interface LabelTagProps {
   text: string;
@@ -27,6 +28,7 @@ function App() {
       <Cards avatar heading="Card title" body="A description of a task" />
       <Cards avatar heading="Card title" body="A description of a task" tasks={["sleep", "eat", "drink water"]} />
       <Cards avatar heading="Card title" body="A description of a task" tasks={["sleep", "eat", "drink water"]} tags={tags} />
+      <StarterBoard title="Starter Board" desc="This is starter board" />
     </div>
   );
 }
