@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { colorMap } from "./colorMap";
+import { colorMap } from "./colormap";
 
 interface LabelTagProps {
   text: string;
-  color?: string;
+  color: string;
 }
 
 const Label: React.FC<LabelTagProps> = ({ text, color }) => {

@@ -6,14 +6,14 @@ import Label from "./Label";
 
 interface LabelTagProps {
   text: string;
-  color?: string;
+  color: string;
 }
 
 interface CardsProp {
   label?: LabelTagProps;
   avatar?: boolean;
   heading: string;
-  body: string;
+  body?: string;
   tasks?: string[];
   tags?: LabelTagProps[];
 }
@@ -29,14 +29,16 @@ const Cards: React.FC<CardsProp> = ({ label, heading, body, tasks, avatar, tags 
   const cardTags = tags?.map((tag) => <Tag key={tag?.text} text={tag?.text} color={tag?.color} />);
 
   return (
-    <div>
-      {labelTop}
-      <div className="block rounded-lg bg-[#FAF9F6] p-6 drop-shadow-md text-left w-96 my-5">
-        {avatar && <div>{avatarImg}</div>}
-        <h2 className="font-['SF Compact Text'] text-base font-semibold my-2">{heading}</h2>
-        <p className="font-['SF Compact Text'] text-sm font-normal text-[#5A5A65]">{body}</p>
-        {tasksList && <div className="mt-4">{tasksList}</div>}
-        {cardTags && <div className="mt-4">{cardTags}</div>}
+    <div className="grid-cols-4 mr-2">
+      <div>
+        {labelTop}
+        <div className="block rounded-lg bg-[#FAF9F6] p-6 drop-shadow-md text-left max-w-96 my-5">
+          {avatar && <div>{avatarImg}</div>}
+          <h2 className="font-['SF Compact Text'] text-base font-semibold my-2">{heading}</h2>
+          {body && <p className="font-['SF Compact Text'] text-sm font-normal text-[#5A5A65]">{body}</p>}
+          {tasksList && <div className="mt-4">{tasksList}</div>}
+          {cardTags && <div className="mt-4">{cardTags}</div>}
+        </div>
       </div>
     </div>
   );
